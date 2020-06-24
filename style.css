@@ -1,0 +1,249 @@
+/* css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+h1, h2, h3, a, p {
+    font-family: Helvetica, sans-serif;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+body {
+    width: 550px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+li{
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.4);
+}
+
+.lightBlue {
+    color: #c6eee8;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.center{
+    align-items: center;
+}
+
+/* HEADER */
+header {
+    padding: 10px 25px;
+    flex-direction: row;
+    align-items: center;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+li a {
+    padding: 10px;    
+    color: #0080a6;
+    font-weight: 800;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* LISTRA */
+.listra{
+    height: 20px;
+    background: #f7f7f7;
+    border-top: 2px solid #e4e4e4;
+    border-bottom: 2px solid #e4e4e4;
+    margin-bottom: 10px;
+}
+/* Imagem Destaque + Card Maior */
+.cardMaior{
+    color: white;
+    background: #00b3ea;
+    width: 35%;
+    padding: 20px 25px 15px 22px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cardMaior p {
+    margin:20px 0;
+    font-size: 15px;
+    font-weight: 550;
+}
+
+.cardMaior a {
+    background: #ff8900;
+    margin-top: 20px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    width: 75%;
+    border-radius: 6px;
+}
+.imgDestaque {
+    flex-direction: row;
+}
+.imgDestaque .imgComLegenda{
+    width: 60%;
+}
+a {
+    text-decoration: none;
+}
+
+/* Cards Menores */
+.cardsMenores {
+    margin-top: 10px;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.cardMenor{
+    width: 30%;
+}
+
+.cardMenor h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.cardMenor a {
+    color: #ff8900;
+    font-size: 14px;
+}
+
+.cardMenor p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.imgComLegenda{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cardMenor .centered {
+    font-size: 12px;
+}
+
+/* RESPONSIVE ADJUSTS */
+@media screen and (max-width: 762px) {
+    
+    body, 
+    .imgDestaque .imgComLegenda,
+    .imgDestaque .cardMaior,
+    .cardMenor{
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    header, .imgDestaque, .cardsMenores{
+        flex-direction: column;
+    }
+
+    header h1 {
+        margin-bottom: 20px;
+    }
+
+    header nav {
+        margin-bottom: 10px;
+    }
+
+    .cardMaior {
+        padding: 1.15em 0;
+        text-align: center;
+        order: 1;
+    }
+
+    .cardMaior a {
+        margin: 0 auto;
+        width: 40%;
+    }
+
+    .cardsMenores{
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .cardsMenores p {
+        padding: 1em;
+    }
+
+    .cardMenor {
+        text-align: center;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background: #f7f7f7;
+        border: 1px solid #e4e4e4;
+    }
+
+    .cardMenor a {
+        font-size: 1.4em;
+        display: inline-block;
+        margin: 10px 0 20px;
+    }
+
+    .cardMenor h3 {
+        font-size: 1.8em;
+    }
+
+}
